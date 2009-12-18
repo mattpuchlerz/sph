@@ -42,11 +42,26 @@ end
 
 
 # 
+# Helpers
+# 
+
+helpers do
+  
+  def sph_abbr
+    '<abbr title="Solutions Per Hour">SPH</abbr>'
+  end
+  
+end
+
+
+
+# 
 # Routes
 # 
 
 get '/' do
-  @solutions_in_last_hour = Solution.count :created_at.gte => (Time.now - 3600)
+  @worldwide_sph = Solution.count :created_at.gte => (Time.now - 3600)
+  @personal_sph  = Solution.count :created_at.gte => (Time.now - 3600), :email => params[:email]
   erb :index
 end
 

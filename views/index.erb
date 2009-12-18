@@ -1,6 +1,11 @@
-<dl>
-  <dt>Current Worldwide <abbr title="Solutions Per Hour">SPH</abbr></dt>
-  <dd><%= @solutions_in_last_hour %></dd>
+<dl class="worldwide">
+  <dt>Worldwide</dt>
+  <dd><strong class="sph"><%= @worldwide_sph %></strong> <%= sph_abbr %></dd>
+</dl>
+
+<dl class="personal">
+  <dt>Personal</dt>
+  <dd><strong class="sph"><%= @personal_sph %></strong> <%= sph_abbr %></dd>
 </dl>
 
 <form id="solution_new" action="/" method="post">
