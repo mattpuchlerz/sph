@@ -20,6 +20,8 @@ module Bundler
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/addressable-2.1.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-core-0.10.2/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-core-0.10.2/lib")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/bin")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/data_objects-0.10.0/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/data_objects-0.10.0/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/do_sqlite3-0.10.0/bin")
@@ -42,6 +44,8 @@ module Bundler
   @bundled_specs["addressable"].loaded_from = "#{dir}/specifications/addressable-2.1.1.gemspec"
   @bundled_specs["dm-core"] = eval(File.read("#{dir}/specifications/dm-core-0.10.2.gemspec"))
   @bundled_specs["dm-core"].loaded_from = "#{dir}/specifications/dm-core-0.10.2.gemspec"
+  @bundled_specs["dm-validations"] = eval(File.read("#{dir}/specifications/dm-validations-0.10.2.gemspec"))
+  @bundled_specs["dm-validations"].loaded_from = "#{dir}/specifications/dm-validations-0.10.2.gemspec"
   @bundled_specs["data_objects"] = eval(File.read("#{dir}/specifications/data_objects-0.10.0.gemspec"))
   @bundled_specs["data_objects"].loaded_from = "#{dir}/specifications/data_objects-0.10.0.gemspec"
   @bundled_specs["do_sqlite3"] = eval(File.read("#{dir}/specifications/do_sqlite3-0.10.0.gemspec"))
