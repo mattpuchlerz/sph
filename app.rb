@@ -72,5 +72,8 @@ post '/' do
   else
     flash[:error] = '<p>Couldn&rsquo;t log your &ldquo;solution&rdquo; at this time. Sorry about that.</p>'
   end
-  redirect '/'
+  
+  to_url = '/'
+  to_url += "?email=#{ params[:email] }" unless params[:email] == ''
+  redirect to_url
 end

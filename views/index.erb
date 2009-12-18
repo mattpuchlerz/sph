@@ -9,15 +9,18 @@
 </dl>
 
 <form id="solution_new" action="/" method="post">
-	<dl>
-		<dt>
-			<label for="solution_email">Optional Email</label>
-		</dt>
-		<dd>
-			<input type="email" name="email" />
-		</dd>
-	</dl>
-	<p>
-		<input type="submit" value="Somebody Said &ldquo;Solution&rdquo;" />
-	</p>
+  <fieldset>
+    <h2>Did Somebody Just Say It?</h2>
+  	<dl>
+  		<dt>
+  			<label for="solution_email">Optional Email</label>
+  		</dt>
+  		<dd>
+  			<input type="email" name="email" value="<%= params[:email] %>" />
+  		</dd>
+  	</dl>
+  	<p>
+  		<input type="submit" value="Somebody Said &ldquo;Solution&rdquo;" />
+  	</p>
+  </fieldset>
 </form>
