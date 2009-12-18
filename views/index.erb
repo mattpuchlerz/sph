@@ -1,18 +1,9 @@
-<% if @flash %>
-	<% if @flash.errors.empty? %>
-	<p>Somebody just said &ldquo;solution&rdquo;. I feel for you.</p>
-	<% else %>
-	<p>Couldn&rsquo;t log your &ldquo;solution&rdquo; at this time. Sorry about that.</p>
-	<ul>
-		<% @flash.errors.each do |e| %>
-		<li><%= e %></li>
-		<% end %>
-	</ul>
-	<% end %>
-<% end %>
+<dl>
+  <dt>Current Worldwide <abbr title="Solutions Per Hour">SPH</abbr></dt>
+  <dd><%= @solutions_in_last_hour %></dd>
+</dl>
 
 <form id="solution_new" action="/" method="post">
-	<h4>Somebody Said &ldquo;Solution&rdquo;</h4>
 	<dl>
 		<dt>
 			<label for="solution_email">Optional Email</label>
@@ -22,17 +13,6 @@
 		</dd>
 	</dl>
 	<p>
-		<input type="submit" value="Log It!" />
+		<input type="submit" value="Somebody Said &ldquo;Solution&rdquo;" />
 	</p>
 </form>
-
-<ul>
-	<% @solutions.each do |solution| %>
-	<li>
-		<%= solution.created_at.to_s %>
-		<% unless solution.email == '' %>
-			by <%= solution.email %>
-		<% end %>
-	</li>
-	<% end %>
-</ul>

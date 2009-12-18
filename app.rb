@@ -29,7 +29,10 @@ end
 
 configure do
   
+  use Rack::Flash
+  
   set :root, ROOT
+  set :sessions, true
   
   DataMapper.setup :default, "sqlite3://#{ ROOT }/db/#{ Sinatra::Application.environment }.sqlite3"
   DataMapper.auto_upgrade!
@@ -43,12 +46,16 @@ end
 # 
 
 get '/' do
-  @solutions = Solution.all
+  @solutions_in_last_hour = Solution.count :created_at.gte => (Time.now - 3600)
   erb :index
 end
 
 post '/' do
   @solution = Solution.new params
-  @solution.save
+  if @solution.save
+    flash[:ok] = '<p>Somebody just said &ldquo;solution&rdquo;. I feel for you.</p>'
+  else
+    flash[:error] = '<p>Couldn&rsquo;t log your &ldquo;solution&rdquo; at this time. Sorry about that.</p>'
+  end
   redirect '/'
 end

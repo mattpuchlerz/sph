@@ -14,18 +14,20 @@ module Bundler
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-1.0.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/sinatra-0.9.4/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/sinatra-0.9.4/lib")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-flash-0.1.1/bin")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/rack-flash-0.1.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-aggregates-0.10.2/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-aggregates-0.10.2/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/addressable-2.1.1/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/addressable-2.1.1/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-core-0.10.2/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-core-0.10.2/lib")
-  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/bin")
-  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/data_objects-0.10.0/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/data_objects-0.10.0/lib")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/do_sqlite3-0.10.0/bin")
   $LOAD_PATH.unshift File.expand_path("#{dir}/gems/do_sqlite3-0.10.0/lib")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/bin")
+  $LOAD_PATH.unshift File.expand_path("#{dir}/gems/dm-validations-0.10.2/lib")
 
   @gemfile = "#{dir}/../../Gemfile"
 
@@ -38,18 +40,20 @@ module Bundler
   @bundled_specs["rack"].loaded_from = "#{dir}/specifications/rack-1.0.1.gemspec"
   @bundled_specs["sinatra"] = eval(File.read("#{dir}/specifications/sinatra-0.9.4.gemspec"))
   @bundled_specs["sinatra"].loaded_from = "#{dir}/specifications/sinatra-0.9.4.gemspec"
+  @bundled_specs["rack-flash"] = eval(File.read("#{dir}/specifications/rack-flash-0.1.1.gemspec"))
+  @bundled_specs["rack-flash"].loaded_from = "#{dir}/specifications/rack-flash-0.1.1.gemspec"
   @bundled_specs["dm-aggregates"] = eval(File.read("#{dir}/specifications/dm-aggregates-0.10.2.gemspec"))
   @bundled_specs["dm-aggregates"].loaded_from = "#{dir}/specifications/dm-aggregates-0.10.2.gemspec"
   @bundled_specs["addressable"] = eval(File.read("#{dir}/specifications/addressable-2.1.1.gemspec"))
   @bundled_specs["addressable"].loaded_from = "#{dir}/specifications/addressable-2.1.1.gemspec"
   @bundled_specs["dm-core"] = eval(File.read("#{dir}/specifications/dm-core-0.10.2.gemspec"))
   @bundled_specs["dm-core"].loaded_from = "#{dir}/specifications/dm-core-0.10.2.gemspec"
-  @bundled_specs["dm-validations"] = eval(File.read("#{dir}/specifications/dm-validations-0.10.2.gemspec"))
-  @bundled_specs["dm-validations"].loaded_from = "#{dir}/specifications/dm-validations-0.10.2.gemspec"
   @bundled_specs["data_objects"] = eval(File.read("#{dir}/specifications/data_objects-0.10.0.gemspec"))
   @bundled_specs["data_objects"].loaded_from = "#{dir}/specifications/data_objects-0.10.0.gemspec"
   @bundled_specs["do_sqlite3"] = eval(File.read("#{dir}/specifications/do_sqlite3-0.10.0.gemspec"))
   @bundled_specs["do_sqlite3"].loaded_from = "#{dir}/specifications/do_sqlite3-0.10.0.gemspec"
+  @bundled_specs["dm-validations"] = eval(File.read("#{dir}/specifications/dm-validations-0.10.2.gemspec"))
+  @bundled_specs["dm-validations"].loaded_from = "#{dir}/specifications/dm-validations-0.10.2.gemspec"
 
   def self.add_specs_to_loaded_specs
     Gem.loaded_specs.merge! @bundled_specs

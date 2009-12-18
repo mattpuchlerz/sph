@@ -21,6 +21,12 @@
       <header id="page_header">
         <h1 id="page_title">Solutions Per Hour</h1>
       </header>
+      
+      <section id="flash">
+        <% %w[ ok notice error ].each do |type| %>
+        <div class="<%= type %>"><%= flash[type.to_sym] %></div>
+        <% end %>
+      </section>
     
       <section id="page_content">
         <%= yield %>
