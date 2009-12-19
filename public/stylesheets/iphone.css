@@ -1,0 +1,35 @@
+.regular { font-family: 'LatinModernSans10Regular', sans-serif; }
+.italic {
+  font-family: 'LatinModernSans10Oblique', sans-serif;
+  font-style: italic;
+}
+.bold {
+  font-family: 'LatinModernSans10Bold', sans-serif;
+  font-weight: bold;
+}
+.bold_italic {
+  font-family: 'LatinModernSans10BoldOblique', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.condensed {
+  font-family: 'LatinModernSansDemiCond10Regula', sans-serif;
+  font-weight: bold;
+}
+.condensed_italic {
+  font-family: 'LatinModernSansDemiCond10Obliqu', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.clear:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.hide_element {
+  left: -9999px;
+  position: absolute;
+}
+body { -webkit-text-stroke: 0; }

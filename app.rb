@@ -48,8 +48,8 @@ end
 
 helpers do
   
-  def sph_abbr
-    '<abbr title="Solutions Per Hour">SPH</abbr>'
+  def sph
+    '<sup><acronym title="Solutions Per Hour">SPH</acronym></sup>'
   end
   
 end
@@ -77,4 +77,18 @@ post '/' do
   to_url = '/'
   to_url += "?email=#{ params[:email] }" unless params[:email] == ''
   redirect to_url
+end
+
+
+
+# 
+# Non-Production Routes
+# 
+
+unless Sinatra::Application.environment == :production
+
+  get '/:template' do
+    erb params[:template].to_sym
+  end
+        
 end

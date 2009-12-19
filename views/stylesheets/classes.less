@@ -1,0 +1,54 @@
+@import 'variables';
+
+.regular {
+  font-family: @ff;
+}
+
+.italic {
+  font-family: @ffi;
+  font-style: italic;
+}
+
+.bold {
+  font-family: @ffb;
+  font-weight: bold;
+}
+
+.bold_italic {
+  font-family: @ffbi;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.condensed {
+  font-family: @ffc;
+  font-weight: bold;
+}
+
+.condensed_italic {
+  font-family: @ffci;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.smallcaps {
+  font-family: @ffsc;
+}
+
+.smallcaps_italic {
+  font-family: @ffsci;
+  font-style: italic;
+}
+
+.clear:after {
+	clear: both; 
+	content: "."; 
+	display: block; 
+	height: 0; 
+	visibility: hidden;
+}
+
+.hide_element {
+	left: -9999px;
+	position: absolute;
+}

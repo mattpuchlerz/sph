@@ -1,0 +1,39 @@
+.regular { font-family: LatinModernRoman10Regular, serif; }
+.italic {
+  font-family: LatinModernRoman10Italic, serif;
+  font-style: italic;
+}
+.bold {
+  font-family: LatinModernRoman10Bold, serif;
+  font-weight: bold;
+}
+.bold_italic {
+  font-family: LatinModernRoman10BoldItalic, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.condensed {
+  font-family: LatinModernRomanDunhill10Regula, serif;
+  font-weight: bold;
+}
+.condensed_italic {
+  font-family: LatinModernRomanDunhill10Obliqu, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.smallcaps { font-family: LatinModernRomanCaps10Regular, serif; }
+.smallcaps_italic {
+  font-family: LatinModernRomanCaps10Oblique, serif;
+  font-style: italic;
+}
+.clear:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.hide_element {
+  left: -9999px;
+  position: absolute;
+}
