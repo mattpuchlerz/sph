@@ -70,6 +70,11 @@ body { padding: 0; }
   float: right;
   text-transform: lowercase;
 }
+#site_header #site_tagline em {
+  font-family: LatinModernRomanCaps10Oblique, serif;
+  font-style: italic;
+  color: black;
+}
 #new_solution {
   float: left;
   width: 480px;
