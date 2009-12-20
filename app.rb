@@ -16,9 +16,9 @@ class Solution
   include DataMapper::Resource
   
   property :id,         Serial
-  property :email,      String
-  property :created_at, DateTime, :key => true, :default => Time.now
-  
+  property :ip,         IPAddress, :key => true
+  property :created_at, DateTime,  :key => true, :default => Time.now
+
 end
 
 
@@ -62,23 +62,18 @@ end
 
 get '/' do
   @worldwide_sph = Solution.count :created_at.gte => (Time.now - 3600)
-  if params[:email]
-    @personal_sph = Solution.count :created_at.gte => (Time.now - 3600), :email => params[:email]
-  end
+  @personal_sph  = Solution.count :created_at.gte => (Time.now - 3600), :ip => request.ip
   erb :index
 end
 
 post '/' do
-  @solution = Solution.new params
+  @solution = Solution.new :ip => request.ip
   if @solution.save
     flash[:ok] = '<p>Somebody just said &ldquo;solution&rdquo;. I feel for you.</p>'
   else
     flash[:error] = '<p>Couldn&rsquo;t log your &ldquo;solution&rdquo; at this time. Sorry about that.</p>'
   end
-  
-  to_url = '/'
-  to_url += "?email=#{ params[:email] }" unless params[:email] == ''
-  redirect to_url
+  redirect '/'
 end
 
 
