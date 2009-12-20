@@ -62,7 +62,9 @@ end
 
 get '/' do
   @worldwide_sph = Solution.count :created_at.gte => (Time.now - 3600)
-  @personal_sph  = Solution.count :created_at.gte => (Time.now - 3600), :email => params[:email]
+  if params[:email]
+    @personal_sph = Solution.count :created_at.gte => (Time.now - 3600), :email => params[:email]
+  end
   erb :index
 end
 

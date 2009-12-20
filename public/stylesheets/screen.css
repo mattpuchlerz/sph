@@ -1,25 +1,26 @@
-.regular { font-family: 'LatinModernSans10Regular', sans-serif; }
+.regular { font-family: LatinModernRoman10Regular, serif; }
 .italic {
-  font-family: 'LatinModernSans10Oblique', sans-serif;
+  font-family: LatinModernRoman10Italic, serif;
   font-style: italic;
 }
 .bold {
-  font-family: 'LatinModernSans10Bold', sans-serif;
+  font-family: LatinModernRoman10Bold, serif;
   font-weight: bold;
 }
 .bold_italic {
-  font-family: 'LatinModernSans10BoldOblique', sans-serif;
+  font-family: LatinModernRoman10BoldItalic, serif;
   font-style: italic;
   font-weight: bold;
 }
-.condensed {
-  font-family: 'LatinModernSansDemiCond10Regula', sans-serif;
-  font-weight: bold;
-}
+.condensed { font-family: LatinModernRomanDunhill10Regula, serif; }
 .condensed_italic {
-  font-family: 'LatinModernSansDemiCond10Obliqu', sans-serif;
+  font-family: LatinModernRomanDunhill10Obliqu, serif;
   font-style: italic;
-  font-weight: bold;
+}
+.smallcaps { font-family: LatinModernRomanCaps10Regular, serif; }
+.smallcaps_italic {
+  font-family: LatinModernRomanCaps10Oblique, serif;
+  font-style: italic;
 }
 .clear:after {
   clear: both;
@@ -35,4 +36,85 @@
 html {
   height: 100%;
   overflow-y: scroll;
+}
+body { padding: 0; }
+#container {
+  margin: 0 auto;
+  width: 960px;
+}
+#site_header {
+  border-bottom: 1px solid #eeeeee;
+  padding: 48px 48px 24px;
+}
+#site_header:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+#site_header #site_title { margin: 0; }
+#site_header #site_tagline { margin: 0; }
+#site_header #site_title {
+  font-family: LatinModernRomanDunhill10Obliqu, serif;
+  font-style: italic;
+  float: left;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  position: relative;
+  top: -3px;
+}
+#site_header #site_tagline {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  float: right;
+  text-transform: lowercase;
+}
+#new_solution {
+  float: left;
+  width: 480px;
+}
+#jerk {
+  font-family: LatinModernRoman10Italic, serif;
+  font-style: italic;
+  float: right;
+  height: 443.564356435644px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  position: relative;
+  width: 480px;
+}
+#jerk strong {
+  font-family: LatinModernRoman10BoldItalic, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+#jerk p {
+  bottom: 330px;
+  left: 5px;
+  margin: 0;
+  position: absolute;
+  text-align: center;
+  -moz-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  width: 240px;
+}
+#jerk img {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 480px;
+}
+#site_footer {
+  border-top: 1px solid #eeeeee;
+  clear: both;
+  padding: 24px 48px;
+}
+#site_footer .author { margin-bottom: 0; }
+#site_footer .colophon {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  font-size: 14px;
 }

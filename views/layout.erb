@@ -17,10 +17,11 @@
   
   <body>
     
-    <section id="page_container">
+    <section id="container">
       
-      <header id="page_header">
-        <h1 id="page_title">Solutions Per Hour</h1>
+      <header id="site_header">
+        <h1 id="site_title">Solutions Per Hour</h1>
+        <p id="site_tagline">Tracking the Overuse of &ldquo;Solutions&rdquo; Worldwide</p>
       </header>
       
       <section id="flash">
@@ -32,6 +33,11 @@
       <section id="page_content">
         <%= yield %>
       </section>
+      
+      <footer id="site_footer">
+        <p class="author">Another fine website created by <strong><em><a href="http://matt.puchlerz.com" title="Designer &amp; Web Developer">Matt Puchlerz</a></em></strong>.</p>
+        <p class="colophon">Utilizing <acronym title="Hypertext Markup Language v5">HTML5</acronym>, <acronym title="Cascading Stylesheets v3">CSS3</acronym>, <a href="http://www.fontsquirrel.com/fonts/Latin-Modern-Roman">Latin Modern Roman</a>, Ruby, and Sinatra. <a href="http://github.com/mattpuchlerz/sph">Fork me on GitHub</a>.</p>
+      </footer>
     
     </section>
     

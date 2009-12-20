@@ -9,13 +9,99 @@ html {
   overflow-y: scroll;
 }
 
-
-
-/*** COMMON STUFF ***/
-
-
+body {
+  padding: 0;
+}
 
 
 
-/*** PAGE-SPECIFIC ***/
+/*** SPECIFIC STUFF ***/
+
+#container {
+  margin: 0 auto;
+  width: @w-container;
+}
+
+#site_header {
+  .clear;
+  border-bottom: 1px solid @grey-light;
+  padding: (@lh * 2) (@lh * 2) @lh;
+  
+  #site_title,
+  #site_tagline {
+    margin: 0;
+  }
+  
+  #site_title {
+    .condensed_italic;
+    float: left;
+    font-size: @lh;
+    font-weight: normal;
+    line-height: @lh;
+    position: relative;
+    top: -3px;
+  }
+  
+  #site_tagline {
+    .smallcaps;
+    float: right;
+    text-transform: lowercase;
+  }
+}
+
+#new_solution {
+  float: left;
+  width: 480px;
+}
+
+#jerk {
+  @orig_height: 560px;
+  @orig_width: 606px;
+  @width: 480px;
+  
+  .italic;
+  float: right;
+  height: @orig_height * (@width / @orig_width);
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  position: relative;
+  width: @width;
+  
+  strong {
+    .bold_italic;
+  }
+  
+  p {
+    bottom: 330px;
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    .transform( rotate(-6deg) );
+    width: 240px;
+  }
+
+  img {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: #jerk[@width];
+  }
+}
+
+#site_footer {
+  border-top: 1px solid @grey-light;
+  clear: both;
+  padding: @lh (@lh * 2);
+  
+  .author {
+    margin-bottom: 0;
+  }
+  
+  .colophon {
+    .smallcaps;
+    font-size: 14px;
+  }
+}
 

@@ -109,7 +109,10 @@ abbr, acronym {
   border-bottom: 1px dotted #888888;
   cursor: help;
 }
-acronym { font-family: LatinModernRomanCaps10Regular, serif; }
+acronym {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  text-transform: lowercase;
+}
 strong, em { color: #333333; }
 strong {
   font-family: LatinModernRoman10Bold, serif;
@@ -294,8 +297,8 @@ ol ul { margin-bottom: 0; }
 ol ul li { margin-top: 12px; }
 ol ol { margin-bottom: 0; }
 ol ol li { margin-top: 12px; }
-ul li { list-style-type: square; }
-ol ul li { list-style-type: square; }
+ul li { list-style-type: disc; }
+ol ul li { list-style-type: disc; }
 ol li { list-style-type: decimal; }
 ul ol li { list-style-type: decimal; }
 dl dt {

@@ -12,14 +12,10 @@
   font-style: italic;
   font-weight: bold;
 }
-.condensed {
-  font-family: LatinModernRomanDunhill10Regula, serif;
-  font-weight: bold;
-}
+.condensed { font-family: LatinModernRomanDunhill10Regula, serif; }
 .condensed_italic {
   font-family: LatinModernRomanDunhill10Obliqu, serif;
   font-style: italic;
-  font-weight: bold;
 }
 .smallcaps { font-family: LatinModernRomanCaps10Regular, serif; }
 .smallcaps_italic {

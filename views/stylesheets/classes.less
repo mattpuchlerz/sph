@@ -22,13 +22,11 @@
 
 .condensed {
   font-family: @ffc;
-  font-weight: bold;
 }
 
 .condensed_italic {
   font-family: @ffci;
   font-style: italic;
-  font-weight: bold;
 }
 
 .smallcaps {
@@ -51,4 +49,11 @@
 .hide_element {
 	left: -9999px;
 	position: absolute;
+}
+
+.transform (@thing: none) {
+  -moz-transform: @thing;
+  -o-transform: @thing;
+  -webkit-transform: @thing;
+  transform: @thing;
 }
