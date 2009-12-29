@@ -106,7 +106,7 @@ a:hover {
 a:hover strong { color: #fa8333; }
 a:hover em { color: #fa8333; }
 abbr, acronym {
-  border-bottom: 1px dotted #888888;
+  border-bottom: 1px dotted #aaaaaa;
   cursor: help;
 }
 acronym {

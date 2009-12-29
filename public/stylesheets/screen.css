@@ -42,6 +42,33 @@ html {
   overflow-y: scroll;
 }
 body { padding: 0; }
+dl.sph_rate {
+  height: 144px;
+  position: relative;
+  text-align: center;
+  width: 192px;
+}
+dl.sph_rate dt {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  border-top: 1px solid #eeeeee;
+  font-weight: normal;
+  left: 0;
+  position: absolute;
+  text-transform: lowercase;
+  top: 120px;
+  width: 100%;
+}
+dl.sph_rate dd {
+  font-family: LatinModernRomanDunhill10Obliqu, serif;
+  font-style: italic;
+  font-size: 96px;
+  height: 96px;
+  left: 0;
+  line-height: 96px;
+  position: absolute;
+  top: 15.9984px;
+  width: 100%;
+}
 #container {
   margin: 0 auto;
   position: relative;
@@ -117,7 +144,7 @@ body { padding: 0; }
   margin-left: 48px;
   width: 408px;
 }
-#primary #sph_rates { margin: 24px 0; }
+#primary #sph_rates { margin: 0 0 24px; }
 #primary #sph_rates:after {
   clear: both;
   content: ".";
@@ -125,33 +152,8 @@ body { padding: 0; }
   height: 0;
   visibility: hidden;
 }
-#primary #sph_rates dl {
-  float: left;
-  height: 120px;
-  margin-right: 48px;
-  position: relative;
-}
-#primary #sph_rates dl dt {
-  font-family: LatinModernRomanCaps10Regular, serif;
-  font-weight: normal;
-  position: absolute;
-  text-transform: lowercase;
-  top: 96px;
-}
-#primary #sph_rates dl dd {
-  font-size: 96px;
-  height: 96px;
-  line-height: 96px;
-}
-#primary #sph_rates dl dd sup {
-  font-size: 24px;
-  margin-left: -12px;
-  top: -72px;
-}
-#primary #sph_rates dl dd .sph {
-  font-family: LatinModernRomanDunhill10Obliqu, serif;
-  font-style: italic;
-}
+#primary #sph_rates .sph_rate { float: left; }
+#primary #sph_rates .sph_rate.worldwide { margin-right: 24px; }
 #primary #new_solution input[type="submit"] {
   font-family: LatinModernRomanCaps10Regular, serif;
   font-size: 24px;

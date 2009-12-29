@@ -2,14 +2,14 @@
 
   <div id="sph_rates">
     
-    <dl class="worldwide">
-      <dt>Worldwide</dt>
-      <dd><span class="sph"><%= @worldwide_sph %></span> <%= sph %></dd>
+    <dl class="sph_rate worldwide">
+      <dt><%= sph %> Worldwide</dt>
+      <dd><%= @worldwide_sph %></dd>
     </dl>
 
-    <dl class="request_ip">
-      <dt>From your IP</dt>
-      <dd><span class="sph"><%= @request_ip_sph %></span> <%= sph %></dd>
+    <dl class="sph_rate request_ip">
+      <dt><%= sph %> from your IP</dt>
+      <dd><%= @request_ip_sph %></dd>
     </dl>
     
   </div>
@@ -28,7 +28,7 @@
 
   <blockquote id="jerk">
     <p>We don&rsquo;t need to know what the problem is &mdash; <strong>we have the solution!</strong></p>
-    <img src="/images/business_meeting.png" />
+    <img src="/images/business_meeting.png" alt="Jerk in a business meeting">
   </blockquote>
 
 </div>

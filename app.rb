@@ -49,7 +49,7 @@ end
 helpers do
   
   def sph
-    '<sup><acronym title="Solutions Per Hour">SPH</acronym></sup>'
+    '<acronym title="Solutions Per Hour">SPH</acronym>'
   end
   
 end
