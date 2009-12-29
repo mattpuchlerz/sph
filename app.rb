@@ -69,9 +69,9 @@ end
 post '/' do
   @solution = Solution.new :ip => request.ip
   if @solution.save
-    flash[:ok] = '<p>Somebody just said &ldquo;solution&rdquo;. I feel for you.</p>'
+    flash[:ok] = '<p><strong>There I go again!</strong> Did you hear? I said solution! Spell it with me: S-O-L-U-T-I-O-N!</p>'
   else
-    flash[:error] = '<p>Couldn&rsquo;t log your &ldquo;solution&rdquo; at this time. Sorry about that.</p>'
+    flash[:error] = '<p><strong>I&rsquo;m not feeling so well.</strong> Having trouble saying sol&hellip; solut&hellip; try again later?</p>'
   end
   redirect '/'
 end

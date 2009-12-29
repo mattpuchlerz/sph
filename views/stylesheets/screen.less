@@ -88,25 +88,46 @@ dl.sph_rate {
   }
 }
 
+#page_content {
+  .clear;
+  padding-top: @lh;
+}
+
 #flash {
   position: absolute;
   right: @lh;
   top: @lh * 1.5;
   
   div {
-    .border-radius(@lh / 5);
-    padding: @lh / 2;
+    .italic;
+    .border-radius(@lh);
+    font-size: @fs-blockquote;
+    margin: 0;
+    min-height: @lh * 3;
+    padding: @lh * .5;
+    position: absolute;
+    right: 182px;
     text-align: center;
-    width: @lh * 24;
+    top: 131px;
+    .transform( rotate(-6deg) );
+    width: 240px;
+    z-index: 100;
   }
   
   p {
     margin: 0;
   }
   
+  .ok,
+  .ok *,
+  .error,
+  .error * {
+    color: white !important;
+  }
+  
   .ok {
     background: #0a0;
-    color: white;
+    color: white !important;
   }
   
   .notice {
@@ -115,13 +136,7 @@ dl.sph_rate {
   
   .error {
     background: #c00;
-    color: white;
   }
-}
-
-#page_content {
-  .clear;
-  padding-top: @lh;
 }
 
 #primary {

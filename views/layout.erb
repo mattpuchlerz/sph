@@ -28,16 +28,18 @@
         <p id="site_tagline">Tracking the <em>Overuse of &ldquo;Solutions&rdquo;</em> Worldwide</p>
       </header>
       
-      <section id="flash">
-        <% [ :ok, :notice, :error ].each do |type| %>
-          <% if flash[type] %>
-          <div class="<%= type %>"><%= flash[type] %></div>
-          <% end %>
-        <% end %>
-      </section>
-    
       <section id="page_content">
+
+        <section id="flash">
+          <% [ :ok, :notice, :error ].each do |type| %>
+            <% if flash[type] %>
+            <div class="<%= type %>"><%= flash[type] %></div>
+            <% end %>
+          <% end %>
+        </section>
+    
         <%= yield %>
+        
       </section>
       
       <footer id="site_footer">

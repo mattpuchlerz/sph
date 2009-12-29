@@ -109,30 +109,6 @@ dl.sph_rate dd {
   font-style: italic;
   color: black;
 }
-#flash {
-  position: absolute;
-  right: 24px;
-  top: 36px;
-}
-#flash div {
-  -moz-border-radius: 4.8px;
-  -o-border-radius: 4.8px;
-  -webkit-border-radius: 4.8px;
-  border-radius: 4.8px;
-  padding: 12px;
-  text-align: center;
-  width: 576px;
-}
-#flash p { margin: 0; }
-#flash .ok {
-  background: #00aa00;
-  color: white;
-}
-#flash .notice { background: #eeddaa; }
-#flash .error {
-  background: #cc0000;
-  color: white;
-}
 #page_content { padding-top: 24px; }
 #page_content:after {
   clear: both;
@@ -141,6 +117,44 @@ dl.sph_rate dd {
   height: 0;
   visibility: hidden;
 }
+#flash {
+  position: absolute;
+  right: 24px;
+  top: 36px;
+}
+#flash div {
+  font-family: LatinModernRoman10Italic, serif;
+  font-style: italic;
+  -moz-border-radius: 24px;
+  -o-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  font-size: 18px;
+  margin: 0;
+  min-height: 72px;
+  padding: 12px;
+  position: absolute;
+  right: 182px;
+  text-align: center;
+  top: 131px;
+  -moz-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  width: 240px;
+  z-index: 100;
+}
+#flash p { margin: 0; }
+#flash .ok { color: white !important; }
+#flash .ok * { color: white !important; }
+#flash .error { color: white !important; }
+#flash .error * { color: white !important; }
+#flash .ok {
+  background: #00aa00;
+  color: white !important;
+}
+#flash .notice { background: #eeddaa; }
+#flash .error { background: #cc0000; }
 #primary {
   float: left;
   margin-left: 48px;
