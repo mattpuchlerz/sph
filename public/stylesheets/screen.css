@@ -43,14 +43,15 @@ html {
 }
 body { padding: 0; }
 dl.sph_rate {
-  height: 144px;
+  height: 168px;
+  margin-bottom: 0;
   position: relative;
   text-align: center;
   width: 192px;
 }
 dl.sph_rate dt {
   font-family: LatinModernRomanCaps10Regular, serif;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #dddddd;
   font-weight: normal;
   left: 0;
   position: absolute;
@@ -66,6 +67,7 @@ dl.sph_rate dd {
   left: 0;
   line-height: 96px;
   position: absolute;
+  text-indent: -0.1em;
   top: 15.9984px;
   width: 100%;
 }
@@ -144,7 +146,6 @@ dl.sph_rate dd {
   margin-left: 48px;
   width: 408px;
 }
-#primary #sph_rates { margin: 0 0 24px; }
 #primary #sph_rates:after {
   clear: both;
   content: ".";
@@ -154,6 +155,11 @@ dl.sph_rate dd {
 }
 #primary #sph_rates .sph_rate { float: left; }
 #primary #sph_rates .sph_rate.worldwide { margin-right: 24px; }
+#primary #new_solution { margin-top: 24px; }
+#primary #new_solution h3 {
+  margin: 0;
+  padding: 12px 0;
+}
 #primary #new_solution input[type="submit"] {
   font-family: LatinModernRomanCaps10Regular, serif;
   font-size: 24px;
@@ -162,12 +168,13 @@ dl.sph_rate dd {
 }
 #secondary {
   float: right;
-  width: 480px;
+  margin-right: 48px;
+  width: 408px;
 }
 #secondary #jerk {
   font-family: LatinModernRoman10Italic, serif;
   font-style: italic;
-  height: 443.564356435644px;
+  height: 456px;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
@@ -179,9 +186,14 @@ dl.sph_rate dd {
   font-weight: bold;
 }
 #secondary #jerk p {
-  bottom: 330px;
-  left: 5px;
+  -moz-border-radius: 24px;
+  -o-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  border-radius: 24px;
+  bottom: 314px;
+  left: -14px;
   margin: 0;
+  padding: 12px;
   position: absolute;
   text-align: center;
   -moz-transform: rotate(-6deg);
@@ -191,10 +203,10 @@ dl.sph_rate dd {
   width: 240px;
 }
 #secondary #jerk img {
-  left: 0;
+  bottom: 0;
   position: absolute;
-  top: 0;
-  width: 480px;
+  right: -48px;
+  width: 456px;
 }
 #site_footer {
   border-top: 1px solid #eeeeee;

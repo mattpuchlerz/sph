@@ -14,14 +14,17 @@ body {
 }
 
 dl.sph_rate {
-  height: @lh * 6;
+/*  background: @grey-light;*/
+/*  .border-radius(@lh * .5);*/
+  height: @lh * 7;
+  margin-bottom: 0;
   position: relative;
   text-align: center;
   width: @lh * 8;
   
   dt {
     .smallcaps;
-    border-top: 1px solid @grey-light;
+    border-top: 1px solid (@grey-light - #111);
     font-weight: normal;
     left: 0;
     position: absolute;
@@ -37,6 +40,7 @@ dl.sph_rate {
     left: 0;
     line-height: @lh * 4;
     position: absolute;
+    text-indent: -.1em;
     top: @lh * .6666;
     width: 100%;
   }
@@ -127,7 +131,6 @@ dl.sph_rate {
   
   #sph_rates {
     .clear;
-    margin: 0 0 @lh;
     
     .sph_rate {
       float: left;
@@ -135,16 +138,17 @@ dl.sph_rate {
     
     .sph_rate.worldwide {
       margin-right: @lh;
-/*      padding-right: @lh * .5;*/
-    }
-    
-    .sph_rate.request_ip {
-/*      border-left: 1px solid @grey-light;*/
-/*      padding-left: (@lh * .5) - 1;*/
-    }
+    }    
   }
   
   #new_solution {
+    margin-top: @lh;
+    
+    h3 {
+      margin: 0;
+      padding: (@lh * .5) 0;
+    }
+
     input[type="submit"] {
       .smallcaps;
       font-size: @lh;
@@ -156,14 +160,17 @@ dl.sph_rate {
 
 #secondary {
   float: right;  
-  width: @lh * 20;
+  margin-right: @lh * 2;
+  width: @lh * 17;
 
   #jerk {
     @orig_height: 560px;
     @orig_width: 606px;
+    @new_height: @lh * 19;
+    @new_width: @lh * 19;
   
     .italic;
-    height: @orig_height * (#secondary['width'] / @orig_width);
+    height: @new_height;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
@@ -174,9 +181,11 @@ dl.sph_rate {
     }
   
     p {
-      bottom: 330px;
-      left: 5px;
+      .border-radius(@lh);
+      bottom: 314px;
+      left: -14px;
       margin: 0;
+      padding: @lh * .5;
       position: absolute;
       text-align: center;
       .transform( rotate(-6deg) );
@@ -184,10 +193,10 @@ dl.sph_rate {
     }
 
     img {
-      left: 0;
+      bottom: 0;
       position: absolute;
-      top: 0;
-      width: #secondary['width'];
+      right: @lh * -2;
+      width: @new_width;
     }
   }
 }
