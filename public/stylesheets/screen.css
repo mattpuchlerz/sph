@@ -100,15 +100,30 @@ body { padding: 0; }
   background: #cc0000;
   color: white;
 }
+#page_content { padding-top: 24px; }
+#page_content:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
 #primary {
   float: left;
-  width: 480px;
+  margin-left: 48px;
+  width: 408px;
+}
+#primary #new_solution input[type="submit"] {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  font-size: 24px;
+  line-height: 48px !important;
+  width: 100%;
 }
 #secondary {
   float: right;
   width: 480px;
 }
-#jerk {
+#secondary #jerk {
   font-family: LatinModernRoman10Italic, serif;
   font-style: italic;
   height: 443.564356435644px;
@@ -117,12 +132,12 @@ body { padding: 0; }
   padding: 0;
   position: relative;
 }
-#jerk strong {
+#secondary #jerk strong {
   font-family: LatinModernRoman10BoldItalic, serif;
   font-style: italic;
   font-weight: bold;
 }
-#jerk p {
+#secondary #jerk p {
   bottom: 330px;
   left: 5px;
   margin: 0;
@@ -134,7 +149,7 @@ body { padding: 0; }
   transform: rotate(-6deg);
   width: 240px;
 }
-#jerk img {
+#secondary #jerk img {
   left: 0;
   position: absolute;
   top: 0;
