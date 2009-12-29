@@ -1,4 +1,8 @@
-.regular { font-family: LatinModernRoman10Regular, serif; }
+.regular {
+  font-family: LatinModernRoman10Regular, serif;
+  font-style: none;
+  font-weight: normal;
+}
 .italic {
   font-family: LatinModernRoman10Italic, serif;
   font-style: italic;

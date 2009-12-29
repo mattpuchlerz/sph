@@ -1,4 +1,8 @@
-.regular { font-family: LatinModernRoman10Regular, serif; }
+.regular {
+  font-family: LatinModernRoman10Regular, serif;
+  font-style: none;
+  font-weight: normal;
+}
 .italic {
   font-family: LatinModernRoman10Italic, serif;
   font-style: italic;
@@ -112,6 +116,41 @@ body { padding: 0; }
   float: left;
   margin-left: 48px;
   width: 408px;
+}
+#primary #sph_rates { margin: 24px 0; }
+#primary #sph_rates:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+#primary #sph_rates dl {
+  float: left;
+  height: 120px;
+  margin-right: 48px;
+  position: relative;
+}
+#primary #sph_rates dl dt {
+  font-family: LatinModernRomanCaps10Regular, serif;
+  font-weight: normal;
+  position: absolute;
+  text-transform: lowercase;
+  top: 96px;
+}
+#primary #sph_rates dl dd {
+  font-size: 96px;
+  height: 96px;
+  line-height: 96px;
+}
+#primary #sph_rates dl dd sup {
+  font-size: 24px;
+  margin-left: -12px;
+  top: -72px;
+}
+#primary #sph_rates dl dd .sph {
+  font-family: LatinModernRomanDunhill10Obliqu, serif;
+  font-style: italic;
 }
 #primary #new_solution input[type="submit"] {
   font-family: LatinModernRomanCaps10Regular, serif;

@@ -1,18 +1,22 @@
 <div id="primary">
 
-  <dl class="worldwide">
-    <dt>Worldwide</dt>
-    <dd><strong class="sph"><%= @worldwide_sph %></strong> <%= sph %></dd>
-  </dl>
+  <div id="sph_rates">
+    
+    <dl class="worldwide">
+      <dt>Worldwide</dt>
+      <dd><span class="sph"><%= @worldwide_sph %></span> <%= sph %></dd>
+    </dl>
 
-  <dl class="request_ip">
-    <dt>From your IP</dt>
-    <dd><strong class="sph"><%= @request_ip_sph %></strong> <%= sph %></dd>
-  </dl>
+    <dl class="request_ip">
+      <dt>From your IP</dt>
+      <dd><span class="sph"><%= @request_ip_sph %></span> <%= sph %></dd>
+    </dl>
+    
+  </div>
 
   <form id="new_solution" action="/" method="post">
     <fieldset>
-      <h3>Did Somebody Just Say It?</h3>
+      <h3>Did Someone Just Say It?</h3>
       <p>Chances are they could have used a more <em>descriptive</em> and <em>contextually appropriate</em> phrase. Do your part by logging their <span class="smallcaps">lack of expressive language</span> &mdash; think of it as a <strong>petition against <em>monotonous marketing</em></strong>.</p>
     	<p><input type="submit" value="Somebody said &ldquo;Solution&rdquo;" /></p>
     </fieldset>

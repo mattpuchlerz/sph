@@ -96,6 +96,42 @@ body {
   margin-left: @lh * 2;
   width: @lh * 17;
   
+  #sph_rates {
+    .clear;
+    margin: @lh 0;
+    
+    dl {
+      float: left;
+      height: @lh * 5;
+      margin-right: @lh * 2;
+      position: relative;
+      
+      dt {
+        .smallcaps;
+        font-weight: normal;
+        position: absolute;
+        text-transform: lowercase;
+        top: @lh * 4;
+      }
+      
+      dd {
+        font-size: @lh * 4;
+        height: @lh * 4;
+        line-height: @lh * 4;
+        
+        sup {
+          font-size: @lh;
+          margin-left: @lh / 2 * -1;
+          top: @lh * 3 * -1;
+        }
+        
+        .sph {
+          .condensed_italic;
+        }
+      }
+    }
+  }
+  
   #new_solution {
     input[type="submit"] {
       .smallcaps;
