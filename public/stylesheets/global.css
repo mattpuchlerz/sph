@@ -12,14 +12,10 @@
   font-style: italic;
   font-weight: bold;
 }
-.condensed {
-  font-family: LatinModernRomanDunhill10Regula, serif;
-  font-weight: bold;
-}
+.condensed { font-family: LatinModernRomanDunhill10Regula, serif; }
 .condensed_italic {
   font-family: LatinModernRomanDunhill10Obliqu, serif;
   font-style: italic;
-  font-weight: bold;
 }
 .smallcaps { font-family: LatinModernRomanCaps10Regular, serif; }
 .smallcaps_italic {
@@ -163,9 +159,10 @@ input[type="checkbox"], input[type="radio"] { vertical-align: middle; }
 input[type="submit"] {
   background-color: #c75000;
   border: 0;
-  border-radius: 4.8px;
   -moz-border-radius: 4.8px;
+  -o-border-radius: 4.8px;
   -webkit-border-radius: 4.8px;
+  border-radius: 4.8px;
   color: white;
   cursor: pointer;
   line-height: 24px !important;
@@ -243,7 +240,6 @@ h6 em {
 h6 strong { text-transform: uppercase; }
 h1 {
   font-family: LatinModernRomanDunhill10Regula, serif;
-  font-weight: bold;
   font-size: 48px;
   line-height: 48px;
   margin-bottom: 48px;
@@ -251,7 +247,6 @@ h1 {
 h1 em {
   font-family: LatinModernRomanDunhill10Obliqu, serif;
   font-style: italic;
-  font-weight: bold;
 }
 h1 strong { font-size: 45px; }
 * + h1 { margin-top: 96px; }

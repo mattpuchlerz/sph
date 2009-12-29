@@ -40,6 +40,7 @@ html {
 body { padding: 0; }
 #container {
   margin: 0 auto;
+  position: relative;
   width: 960px;
 }
 #site_header {
@@ -75,20 +76,46 @@ body { padding: 0; }
   font-style: italic;
   color: black;
 }
-#new_solution {
+#flash {
+  position: absolute;
+  right: 24px;
+  top: 36px;
+}
+#flash div {
+  -moz-border-radius: 4.8px;
+  -o-border-radius: 4.8px;
+  -webkit-border-radius: 4.8px;
+  border-radius: 4.8px;
+  padding: 12px;
+  text-align: center;
+  width: 576px;
+}
+#flash p { margin: 0; }
+#flash .ok {
+  background: #00aa00;
+  color: white;
+}
+#flash .notice { background: #eeddaa; }
+#flash .error {
+  background: #cc0000;
+  color: white;
+}
+#primary {
   float: left;
+  width: 480px;
+}
+#secondary {
+  float: right;
   width: 480px;
 }
 #jerk {
   font-family: LatinModernRoman10Italic, serif;
   font-style: italic;
-  float: right;
   height: 443.564356435644px;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
   position: relative;
-  width: 480px;
 }
 #jerk strong {
   font-family: LatinModernRoman10BoldItalic, serif;

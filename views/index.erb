@@ -1,23 +1,29 @@
-<dl class="worldwide">
-  <dt>Worldwide</dt>
-  <dd><strong class="sph"><%= @worldwide_sph %></strong> <%= sph %></dd>
-</dl>
+<div id="primary">
 
-<% if @personal_sph %>
-<dl class="personal">
-  <dt>Personal</dt>
-  <dd><strong class="sph"><%= @personal_sph %></strong> <%= sph %></dd>
-</dl>
-<% end %>
+  <dl class="worldwide">
+    <dt>Worldwide</dt>
+    <dd><strong class="sph"><%= @worldwide_sph %></strong> <%= sph %></dd>
+  </dl>
 
-<form id="new_solution" action="/" method="post">
-  <fieldset>
-    <h3>Did Somebody Just Say It?</h3>
-  	<p><input type="submit" value="Somebody said &ldquo;Solution&rdquo;" /></p>
-  </fieldset>
-</form>
+  <dl class="request_ip">
+    <dt>From your IP</dt>
+    <dd><strong class="sph"><%= @request_ip_sph %></strong> <%= sph %></dd>
+  </dl>
 
-<blockquote id="jerk">
-  <p>We don&rsquo;t need to know what the problem is &mdash; <strong>we have the solution!</strong></p>
-  <img src="/images/business_meeting.png" />
-</blockquote>
+  <form id="new_solution" action="/" method="post">
+    <fieldset>
+      <h3>Did Somebody Just Say It?</h3>
+    	<p><input type="submit" value="Somebody said &ldquo;Solution&rdquo;" /></p>
+    </fieldset>
+  </form>
+  
+</div>
+
+<div id="secondary">
+
+  <blockquote id="jerk">
+    <p>We don&rsquo;t need to know what the problem is &mdash; <strong>we have the solution!</strong></p>
+    <img src="/images/business_meeting.png" />
+  </blockquote>
+
+</div>

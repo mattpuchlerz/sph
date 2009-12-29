@@ -19,6 +19,7 @@ body {
 
 #container {
   margin: 0 auto;
+  position: relative;
   width: @w-container;
 }
 
@@ -54,24 +55,57 @@ body {
   }
 }
 
-#new_solution {
+#flash {
+  position: absolute;
+  right: @lh;
+  top: @lh * 1.5;
+  
+  div {
+    .border-radius(@lh / 5);
+    padding: @lh / 2;
+    text-align: center;
+    width: @lh * 24;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .ok {
+    background: #0a0;
+    color: white;
+  }
+  
+  .notice {
+    background: #eda;
+  }
+  
+  .error {
+    background: #c00;
+    color: white;
+  }
+}
+
+#primary {
   float: left;
-  width: 480px;
+  width: @lh * 20;
+}
+
+#secondary {
+  float: right;  
+  width: @lh * 20;
 }
 
 #jerk {
   @orig_height: 560px;
   @orig_width: 606px;
-  @width: 480px;
   
   .italic;
-  float: right;
-  height: @orig_height * (@width / @orig_width);
+  height: @orig_height * (#secondary['width'] / @orig_width);
   margin-left: 0;
   margin-right: 0;
   padding: 0;
   position: relative;
-  width: @width;
   
   strong {
     .bold_italic;
@@ -91,7 +125,7 @@ body {
     left: 0;
     position: absolute;
     top: 0;
-    width: #jerk[@width];
+    width: #secondary['width'];
   }
 }
 

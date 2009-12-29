@@ -61,8 +61,8 @@ end
 # 
 
 get '/' do
-  @worldwide_sph = Solution.count :created_at.gte => (Time.now - 3600)
-  @personal_sph  = Solution.count :created_at.gte => (Time.now - 3600), :ip => request.ip
+  @worldwide_sph  = Solution.count :created_at.gte => (Time.now - 3600)
+  @request_ip_sph = Solution.count :created_at.gte => (Time.now - 3600), :ip => request.ip
   erb :index
 end
 

@@ -187,9 +187,7 @@ input[type="radio"] {
 input[type="submit"] {
   background-color: @bc-submit;
   border: 0;
-  border-radius: @lh / 5;
-  -moz-border-radius: @lh / 5;
-  -webkit-border-radius: @lh / 5;
+  .border-radius(@lh / 5);
   color: @c-submit;
   cursor: pointer;
   line-height: @lh !important;
