@@ -1,4 +1,4 @@
-Rakefile
+Deploy
 tmp/*
 vendor/gems/doc
 vendor/gems/environment.rb
