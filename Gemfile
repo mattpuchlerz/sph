@@ -12,3 +12,5 @@ gem 'dm-validations'
 gem 'do_sqlite3'
 gem 'rack-flash'
 gem 'sinatra'
+
+gem 'rjab'
