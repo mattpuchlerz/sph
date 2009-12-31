@@ -1,0 +1,4 @@
+@host        = 'ip address or hostname'
+@username    = 'user to log in as'
+@deploy_path = '/absolute/path/to/my/website.com'
+@repository  = 'git://github.com/your-username/your-repo.git'
