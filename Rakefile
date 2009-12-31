@@ -1,7 +1,7 @@
 require 'net/ssh'
 load 'Deploy'
 
-[ :host, :username, :deploy_path, :repository ].each do |var|
+%w[ host username deploy_path repository ].each do |var|
   instance_eval "def #{var}; @#{var} || ( raise 'You must specify @#{var}' ); end"
 end
 
